@@ -1,8 +1,14 @@
 import React from 'react';
+import {Container} from './components/layout/rwd';
+
 
 function App() {
   return (
-    <div className="App">Testing</div>
+    <div className="App">
+      <Container>
+        
+      </Container>
+    </div>
   );
 }
 
