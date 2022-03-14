@@ -1,9 +1,12 @@
 import * as React from 'react';
+import style from 'styled-components';
 
-interface InputProps {
+// interface InputProps {
     
-}
+// }
 
-const input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (props: InputProps) => {
-    return <input/>;
-}
+// const inputWrapper = style.input``;
+
+// const input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (props: InputProps) => {
+//     return <input/>;
+// }
