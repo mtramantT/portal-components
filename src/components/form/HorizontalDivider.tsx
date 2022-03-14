@@ -1,18 +1,27 @@
 import styled from "styled-components";
 
-interface HorizontalLineProps {
+interface HrProps {
     type: 'solid' | 'dashed';
     color?: string;
 }
-const HrWrapper = styled.hr<HorizontalLineProps>`
+
+// Style Wrappers
+const HrWrapper = styled.hr<HrProps>`
     border-top: ${({ type, color }) => `1px ${type} ${color || 'black'}`};
 `;
-const defaultProps: HorizontalLineProps = {
+const DivWrapper = styled.div.attrs({ className: 'divder' })`
+    width: 100%;
+`
+
+// Defaults
+const defaultProps: HrProps = {
     type: 'solid',
     color: 'black',
 }
 
-export const Hr = (props?: HorizontalLineProps) => {
+
+// Main Export
+export const Hr = (props?: HrProps): JSX.Element => {
     props = props ? props : defaultProps
-    return <HrWrapper {...props} />
+    return <DivWrapper><HrWrapper {...props} /></DivWrapper>
 }
