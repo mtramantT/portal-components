@@ -8,10 +8,8 @@ interface HrProps {
 // Style Wrappers
 const HrWrapper = styled.hr<HrProps>`
     border-top: ${({ type, color }) => `1px ${type} ${color || 'black'}`};
-`;
-const DivWrapper = styled.div.attrs({ className: 'divder' })`
     width: 100%;
-`
+`;
 
 // Defaults
 const defaultProps: HrProps = {
@@ -23,5 +21,5 @@ const defaultProps: HrProps = {
 // Main Export
 export const Hr = (props?: HrProps): JSX.Element => {
     props = props ? props : defaultProps
-    return <DivWrapper><HrWrapper {...props} /></DivWrapper>
+    return <HrWrapper {...props} />
 }
