@@ -8,10 +8,8 @@ interface ColProps {
     stack?: DeviceSize;
 }
 
-const Col = styled.div<ColProps & React.HTMLProps<HTMLDivElement>>`
+export const Col = styled.div<ColProps & React.HTMLProps<HTMLDivElement>>`
     flex: ${(props) => props.size || 1};
     ${(props) => props.collapse && media[props.collapse](collapseMediaStyle)}
     ${(props) => props.stack && media[props.stack](stackMediaStyle)}
 `
-
-export default Col;
