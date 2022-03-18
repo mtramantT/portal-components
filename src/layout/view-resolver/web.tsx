@@ -8,6 +8,9 @@ export interface WebProps {
     footer?: React.ReactNode;
     body: React.ReactNode;
 }
+
+//Optional Sidebar button
+//Body should add route name to class
 export const Web: React.FC<WebProps> = (props: WebProps) => {
     return (
         <Grid>
