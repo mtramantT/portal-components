@@ -1,0 +1,2 @@
+Avoid default exports. (Messes with the index.ts files)
+Create table wrapper class for adding things like pagination
