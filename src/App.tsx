@@ -6,15 +6,10 @@ function App() {
   return (
     <div className="App">
       <Grid>
-        <Row>
-          <Col stack="sm" size={1}>gfghfjhfjhfh</Col>
-          <Col stack="sm" size={1}>kkkkkkkkkkkkkk</Col>
-          <Col stack="sm">gggggggggggg</Col>
-        </Row>
-        <Row style={{padding: '50px'}}>
-          <Col size={1} stack="sm"></Col>
-          <Col size={1} stack="sm">kkkkkkkkkkkkkk</Col>
-          <Col stack="sm"></Col>
+        <Row stack="sm">
+          <Col size={1}>111111111111111</Col>
+          <Col size={1}>kkkkkkkkkkkkkk</Col>
+          <Col size={3}>gggggggggggg</Col>
         </Row>
       </Grid>
     </div>

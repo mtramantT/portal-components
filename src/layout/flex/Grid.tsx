@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Base from "./Base";
 
-export const Grid = styled.div.attrs({ className: 'grid' })`
+export const Grid = styled(Base).attrs({ className: 'grid' })`
     margin: 5px;
     padding: 5px;
     *{
