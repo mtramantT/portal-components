@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Base from './Base';
-import media, { DeviceSize, isMediaQuery, MediaQuery, mediaStyleProps } from './Media';
+import media, { mediaStyleProps } from './Media';
+import { DeviceSize, isMediaQuery, MediaQuery } from './types';
 
 interface RowProps {
     stack?: DeviceSize | MediaQuery;

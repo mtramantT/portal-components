@@ -4,6 +4,7 @@ export const applyMaxMediaStyle = (breakpoint: number, styles: string) => `
         ${styles}
     }
 `
+
 export const applyMediaQueryStyle = (query: string, styles: string) => `
     ${query} {
         ${styles}
@@ -19,10 +20,6 @@ export const media = {
     md: (styles: string) => applyMaxMediaStyle(1024, styles),
     lg: (styles: string) => applyMaxMediaStyle(1201, styles),
 }
-export type DeviceSize = keyof typeof media;
-export const isDeviceSize = (test: any): test is DeviceSize => {
-    return test in media;
-}
 
 // Media Styles
 const collapse = (props: string[] = []): string => `
@@ -35,16 +32,5 @@ const stack = (props: string[] = []): string => `
 `
 export const mediaStyleProps = {collapse, stack}
 
-// Media Query
-export type MediaQuery = {deviceSize: DeviceSize; styles: string[]}
-export const isMediaQuery = (test: any): test is MediaQuery => {
-    return ("deviceSize" in test && "styles" in test);
-}
-
-// Custom Media
-export type CustomMediaQuery = {styles: string|string[]; mediaQuery: string;}
-export const isCustomMedia = (test: any): test is {styles: string|string[]; mediaQuery: string;} => {
-    return ("styles" in test && "mediaQuery" in test);
-}
 
 export default media;

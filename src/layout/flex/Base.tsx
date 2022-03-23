@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import media, { applyMediaQueryStyle, CustomMediaQuery, DeviceSize, flattenProps, isCustomMedia, isMediaQuery, MediaQuery, mediaStyleProps } from "./Media";
+import media, { applyMediaQueryStyle, flattenProps, mediaStyleProps } from "./Media";
+import { CustomMediaQuery, DeviceSize, isCustomMedia, isMediaQuery, MediaQuery } from "./types";
 
 interface BaseProps {
     collapse?: DeviceSize | MediaQuery;
