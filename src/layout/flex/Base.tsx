@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import media, { applyMediaQueryStyle, CustomMediaQuery, DeviceSize, flattenProps, isCustomMedia, isMediaQuery, MediaQuery, mediaStyleProps } from "./Media";
 
-// Consider adding all the media stuff here to reduce imorts accross the board
-
 interface BaseProps {
     collapse?: DeviceSize | MediaQuery;
     custom?: CustomMediaQuery | string;
