@@ -10,7 +10,7 @@ export const applyMediaQueryStyle = (query: string, styles: string) => `
     }
 `
 
-const flattenProps = (arr: string[]) => `${arr}`.replace(',','');
+export const flattenProps = (arr: string[]) => `${arr}`.replace(',','');
 
 // Media Object
 export const media = {
@@ -39,6 +39,12 @@ export const mediaStyleProps = {collapse, stack}
 export type MediaQuery = {deviceSize: DeviceSize; styles: string[]}
 export const isMediaQuery = (test: any): test is MediaQuery => {
     return ("deviceSize" in test && "styles" in test);
+}
+
+// Custom Media
+export type CustomMediaQuery = {styles: string|string[]; mediaQuery: string;}
+export const isCustomMedia = (test: any): test is {styles: string|string[]; mediaQuery: string;} => {
+    return ("styles" in test && "mediaQuery" in test);
 }
 
 export default media;
