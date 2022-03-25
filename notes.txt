@@ -4,3 +4,5 @@ Create table wrapper class for adding things like pagination
 Input Component
 - Test the focus useeffect out to make sure that empty strings get removed from the input after focus lost.
 - value is mangaged by the component but try accessing it using the onChange prop
+- Maybe make label its own component and add focus managment to change to the input.
+- Do the same as above for the input-wrapper or container 
