@@ -32,5 +32,4 @@ const stack = (props: string[] = []): string => `
 `
 export const mediaStyleProps = {collapse, stack}
 
-
 export default media;
