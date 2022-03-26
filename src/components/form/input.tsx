@@ -26,7 +26,7 @@ const Container = styled.div<{}>`
     width: 95%;
 `;
 
-const Input = styled.input`
+const InputWrapper = styled.input`
     border-width: 0 0 1px 0;
     font-size: 16px;
     width: 100%;
@@ -35,7 +35,7 @@ const Input = styled.input`
     }
 `;
 
-export const input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (props: InputProps) => {
+export const Input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (props: InputProps) => {
     const [value, setValue] = React.useState<string>('');
     const [focus, setFocus] = React.useState<boolean>(false);
     const [hasValue, setHasValue] = React.useState<boolean>(false);
@@ -69,7 +69,7 @@ export const input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (
     return (
         <Container className={'input-wrapper-' + props.id }>
             { props.label && <Label htmlFor={props.id} focus={focus} hasValue={hasValue}>{props.label}</Label>}
-            <Input 
+            <InputWrapper 
                 id={props.id}
                 name={props.id}
                 className={props.className || props.id}

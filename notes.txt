@@ -6,3 +6,7 @@ Input Component
 - value is mangaged by the component but try accessing it using the onChange prop
 - Maybe make label its own component and add focus managment to change to the input.
 - Do the same as above for the input-wrapper or container 
+
+Stepper Component
+- Still some planning to do here...
+- Will probably require setting up context and using the reducer hooks.
