@@ -54,21 +54,21 @@ export const input: React.FC<InputProps & React.HTMLProps<HTMLInputElement>> = (
     const handleChange = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.value);
         props.onChange && props.onChange(event);
-    },[])
+    },[props])
 
     const handleFocus = React.useCallback((event: React.FocusEvent<HTMLInputElement>) => {
         setFocus(true);
         props.onFocus && props.onFocus(event);
-    },[props.onFocus]);
+    },[props]);
 
     const handleBlur = React.useCallback((event: React.FocusEvent<HTMLInputElement>) => {
         setFocus(false);
         props.onBlur && props.onBlur(event);
-    }, [props.onBlur]);
+    }, [props]);
 
     return (
         <Container className={'input-wrapper-' + props.id }>
-            { props.label && <Label htmlFor={props.id}>{props.label}</Label>}
+            { props.label && <Label htmlFor={props.id} focus={focus} hasValue={hasValue}>{props.label}</Label>}
             <Input 
                 id={props.id}
                 name={props.id}
