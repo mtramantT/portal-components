@@ -10,4 +10,5 @@ import App from './App';
 // );
 
 export * from './layout/flex'
+export * from './utility'
 // export * from './components/form'
