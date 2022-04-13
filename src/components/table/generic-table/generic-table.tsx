@@ -17,8 +17,8 @@ const TableWrapper = styled.table``;
 
 export const Table = <T, >(props: TableProps<T>) => {
     return (
-        <table>
+        <TableWrapper>
             
-        </table>
+        </TableWrapper>
     )
 }
