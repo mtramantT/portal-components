@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+import styled from "styled-components";
 
 interface Props<T> {
     data: T[];
@@ -6,12 +7,13 @@ interface Props<T> {
         key: keyof T;
         lable: string;
     }[];
-    idKey: keyof T; //add union tyoe func for custom keys 
 }
 
 interface TableProps<T> extends PropsWithChildren<Props<T>> {
     //Empty wrapper interface
 }
+
+const TableWrapper = styled.table``;
 
 export const Table = <T, >(props: TableProps<T>) => {
     return (

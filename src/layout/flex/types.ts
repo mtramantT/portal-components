@@ -15,7 +15,7 @@ export const isMediaQuery = (test: any): test is MediaQuery => {
 
 // Custom Media
 export type CustomMediaQuery = {styles: string|string[]; mediaQuery: string;}
-export const isCustomMedia = (test: any): test is {styles: string|string[]; mediaQuery: string;} => {
+export const isCustomMedia = (test: any): test is CustomMediaQuery => {
     if (typeof test !== 'object') return false
     return ("styles" in test && "mediaQuery" in test);
 }
