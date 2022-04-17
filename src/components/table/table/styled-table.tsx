@@ -13,5 +13,5 @@ interface TableProps<T extends MinTableItem> {
 }
 
 const Table = <T extends MinTableItem, >(props: TableProps<T>) => {
-
+    
 }
