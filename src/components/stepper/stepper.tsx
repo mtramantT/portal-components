@@ -17,7 +17,7 @@ interface StepperProps {
 
 export const Stepper = (props: StepperProps) => {
     const [currentStep, setCurrentStep] = React.useState(0);
-    const [completedSteps, setCompletedSteps] = React.useState<{[id: number]: boolean}>({})
+    // const [completedSteps, setCompletedSteps] = React.useState<{[id: number]: boolean}>({})
 
     return (
         <Container>
