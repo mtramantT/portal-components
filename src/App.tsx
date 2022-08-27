@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Grid, Row } from './layout/flex';
-import { Input } from './components/form/input'
-
+import { Input } from './components/form/input';
 
 function App() {
   return (
@@ -10,6 +9,13 @@ function App() {
         <Row stack="sm">
           <Col size={1}>111111111111111</Col>
           <Col size={1}>kkkkkkkkkkkkkk</Col>
+          <Col size={1}>3333333333333333</Col>
+          <Col size={3}>gggggggggggg</Col>
+        </Row>
+        <Row stack="sm">
+          <Col size={1}>111111111111111</Col>
+          <Col size={1}>kkkkkkkkkkkkkk</Col>
+          <Col size={1}>3333333333333333</Col>
           <Col size={3}>gggggggggggg</Col>
         </Row>
         <div className='test-form'>
