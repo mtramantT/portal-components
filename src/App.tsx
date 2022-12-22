@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Grid, Row } from './layout/flex';
 import { Input } from './components/form/input';
+import SearchBar from './components/form/SearchBar';
 
 function App() {
   return (
@@ -18,9 +19,12 @@ function App() {
           <Col size={1}>3333333333333333</Col>
           <Col size={3}>gggggggggggg</Col>
         </Row>
-        <div className='test-form'>
+        <Row>
+          <SearchBar />
+        </Row>
+        <Row className='test-form'>
           <Input id='test-input' label='Test Input:'/>
-        </div>
+        </Row>
       </Grid>
     </div>
   );
