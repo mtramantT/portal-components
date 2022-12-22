@@ -5,6 +5,7 @@ import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { PartialProps } from './PartialProps';
 
 interface Props extends Partial<PartialProps> {
+    id?: string;
     label?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -29,7 +30,7 @@ const Input = styled.input<{isDisplayed: boolean, themeColor?: string}>`
     height: 30px;
     font-size: 16px;
     padding: 10px;
-    border-radius: 1% / 50%;
+    border-radius: 1% / 75%;
     width: 100%;
 `;
 
@@ -38,7 +39,7 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 const SearchBar: React.FC<Props> = (props: Props) => {
-    const {label, onChange, themeColor} = props;
+    const {id, label, onChange, themeColor} = props;
     const [value, setValue] = useState<string>('')
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
@@ -49,18 +50,18 @@ const SearchBar: React.FC<Props> = (props: Props) => {
 
     return (
         <Container>
-            <Label htmlFor='search-bar' isDisplayed={isFocused || value.trim() !== ''}>
+            <Label htmlFor={id || 'search-bar'} isDisplayed={isFocused || value.trim() !== ''}>
                 {label || "Search"}
                 <Icon icon={faMagnifyingGlass} />
             </Label>
             <Input 
-                name="search-bar"
+                id={id || 'search-bar'}
                 type="search"
                 value={value}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 onChange={handleChange}
-                isDisplayed={isFocused || value.trim() !== ''}
+                isDisplayed={isFocused}
                 themeColor={themeColor}
             />
         </Container>
