@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import { PartialProps } from './PartialProps';
 
-interface Props {
+interface Props extends Partial<PartialProps> {
     label?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -20,10 +21,11 @@ const Label = styled.label<{isDisplayed: boolean}>`
     left: 13px;
     top: 6px;
     font-size: 16px;
+    cursor: text;
 `;
 
-const Input = styled.input<{isDisplayed: boolean}>`
-    ${({isDisplayed}) => isDisplayed && 'outline: 1px solid blue;'}
+const Input = styled.input<{isDisplayed: boolean, themeColor?: string}>`
+    ${({isDisplayed, themeColor }) => isDisplayed && `outline: 1px solid ${themeColor || 'blue'};`}
     height: 30px;
     font-size: 16px;
     padding: 10px;
@@ -36,7 +38,7 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 const SearchBar: React.FC<Props> = (props: Props) => {
-    const {label, onChange} = props;
+    const {label, onChange, themeColor} = props;
     const [value, setValue] = useState<string>('')
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
@@ -59,6 +61,7 @@ const SearchBar: React.FC<Props> = (props: Props) => {
                 onBlur={() => setIsFocused(false)}
                 onChange={handleChange}
                 isDisplayed={isFocused || value.trim() !== ''}
+                themeColor={themeColor}
             />
         </Container>
     );

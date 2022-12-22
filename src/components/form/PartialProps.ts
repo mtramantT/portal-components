@@ -1,3 +1,3 @@
 export interface PartialProps {
-    color: string;
+    themeColor: string;
 }
