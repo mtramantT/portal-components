@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Grid, Row } from './layout/flex';
 import { Input } from './components/form/input';
 import SearchBar from './components/form/SearchBar';
+import ModalLink from './components/modal-link/ModalLink';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Row>
         <Row className='test-form'>
           <Input id='test-input' label='Test Input:'/>
+        </Row>
+        <Row className='test-form'>
+          <ModalLink />
         </Row>
       </Grid>
     </div>
