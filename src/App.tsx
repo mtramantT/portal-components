@@ -2,8 +2,11 @@ import React from "react";
 import { Col, Grid, Row } from "./layout/flex";
 import { Input } from "./components/form/input";
 import SearchBar from "./components/form/SearchBar";
+import Modal from "./Modal/Modal";
+import useModal from "./Modal/useModal";
 
 function App() {
+  const { isOpen, toggle } = useModal();
   return (
     <div className="App">
       <Grid>
@@ -26,7 +29,10 @@ function App() {
           <Input id="test-input" label="Test Input:" />
         </Row>
         <Row className="test-form">
-          <button>modal</button>
+          <button onClick={toggle}>modal</button>
+          <Modal isOpen={isOpen} toggle={toggle}>
+            Hello Wolrd
+          </Modal>
         </Row>
       </Grid>
     </div>
