@@ -1,2 +1,2 @@
 export * from './table';
-export * from './modal-link/ModalLink'
+export * from './popover/Popover'

@@ -1,8 +1,7 @@
-import React from 'react';
-import { Col, Grid, Row } from './layout/flex';
-import { Input } from './components/form/input';
-import SearchBar from './components/form/SearchBar';
-import ModalLink from './components/modal-link/ModalLink';
+import React from "react";
+import { Col, Grid, Row } from "./layout/flex";
+import { Input } from "./components/form/input";
+import SearchBar from "./components/form/SearchBar";
 
 function App() {
   return (
@@ -23,11 +22,11 @@ function App() {
         <Row>
           <SearchBar />
         </Row>
-        <Row className='test-form'>
-          <Input id='test-input' label='Test Input:'/>
+        <Row className="test-form">
+          <Input id="test-input" label="Test Input:" />
         </Row>
-        <Row className='test-form'>
-          <ModalLink />
+        <Row className="test-form">
+          <button>modal</button>
         </Row>
       </Grid>
     </div>
